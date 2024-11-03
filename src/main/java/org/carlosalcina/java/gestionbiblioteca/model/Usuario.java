@@ -1,6 +1,6 @@
 package org.carlosalcina.java.gestionbiblioteca.model;
 
-class Usuario {
+public class Usuario {
     private int id;
     private String nombre;
 
