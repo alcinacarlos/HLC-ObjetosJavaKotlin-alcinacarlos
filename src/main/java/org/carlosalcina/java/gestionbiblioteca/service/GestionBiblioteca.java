@@ -7,19 +7,19 @@ import java.util.HashMap;
 import java.util.List;
 import java.util.Map;
 
-class GestionBiblioteca {
-    private List<Libro> libros = new ArrayList<>();
-    private List<Usuario> usuarios = new ArrayList<>();
-    private Map<Integer, List<Libro>> prestamos = new HashMap<>();
+public class GestionBiblioteca {
+    private final List<Libro> libros = new ArrayList<>();
+    private final List<Usuario> usuarios = new ArrayList<>();
+    private final Map<Integer, List<Libro>> prestamos = new HashMap<>();
 
     public void agregarLibro(Libro libro) {
         libros.add(libro);
-        System.out.println("Libro '" + libro.getTitulo() + "' agregado a la biblioteca.");
+        System.out.println("Libro " + libro.getTitulo() + " agregado a la biblioteca");
     }
 
     public void registrarUsuario(Usuario usuario) {
         usuarios.add(usuario);
-        System.out.println("Usuario '" + usuario.getNombre() + "' registrado en la biblioteca.");
+        System.out.println("Usuario " + usuario.getNombre() + " registrado en la biblioteca");
     }
 
     public void prestarLibro(int idUsuario, int idLibro) {
@@ -44,7 +44,7 @@ class GestionBiblioteca {
         }
 
         if (libro.isPrestado()) {
-            System.out.println("El libro '" + libro.getTitulo() + "' ya está prestado");
+            System.out.println("El libro " + libro.getTitulo() + " ya está prestado");
             return;
         }
 
@@ -54,7 +54,7 @@ class GestionBiblioteca {
 
         libro.setPrestado(true);
         prestamos.get(idUsuario).add(libro);
-        System.out.println("Libro '" + libro.getTitulo() + "' prestado a '" + usuario.getNombre());
+        System.out.println("Libro " + libro.getTitulo() + " prestado a " + usuario.getNombre());
     }
 
     public void devolverLibro(int idUsuario, int idLibro) {
@@ -77,7 +77,7 @@ class GestionBiblioteca {
 
         libro.setPrestado(false);
         librosPrestados.remove(libro);
-        System.out.println("Libro '" + libro.getTitulo() + "' devuelto por el usuario con ID " + idUsuario);
+        System.out.println("Libro " + libro.getTitulo() + " devuelto por el usuario con ID " + idUsuario);
     }
 
     public void mostrarLibrosPrestados(int idUsuario) {

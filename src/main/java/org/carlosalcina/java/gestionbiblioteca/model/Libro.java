@@ -1,8 +1,8 @@
 package org.carlosalcina.java.gestionbiblioteca.model;
 
 public class Libro {
-    private int id;
-    private String titulo;
+    private final int id;
+    private final String titulo;
     private boolean prestado;
 
     public Libro(int id, String titulo) {

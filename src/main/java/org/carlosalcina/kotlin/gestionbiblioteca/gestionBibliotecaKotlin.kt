@@ -8,12 +8,12 @@ fun gestionBiblotecaKotlin() {
     val biblioteca = GestorBiblioteca()
 
     // Agregar libros
-    biblioteca.agregarLibro(Libro(1, "El Quijote"))
-    biblioteca.agregarLibro(Libro(2, "Cien años de soledad"))
+    biblioteca.agregarLibro(Libro(1, "Libro testing"))
+    biblioteca.agregarLibro(Libro(2, "HOla mundo libro"))
 
     // Registrar usuarios
-    biblioteca.registrarUsuario(Usuario(1, "Juan"))
-    biblioteca.registrarUsuario(Usuario(2, "Ana"))
+    biblioteca.registrarUsuario(Usuario(1, "Lucas"))
+    biblioteca.registrarUsuario(Usuario(2, "Pepa"))
 
     // Prestar libros
     biblioteca.prestarLibro(1, 1)
